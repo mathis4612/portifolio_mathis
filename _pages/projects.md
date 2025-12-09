@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Mathis VIgneau - Portfolio
+title: Mathis Vigneau - Portfolio
 permalink: /projects/
 ---
 
