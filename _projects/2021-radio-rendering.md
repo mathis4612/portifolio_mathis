@@ -2,8 +2,8 @@
 layout: project
 title: Torque wrench CAD Rendering
 description: Advanced CAD Project
-technologies: [Autodesk Fusion and ansys]
-image: /assets/images/Torque-wrench-CAD
+technologies: [Autodesk Fusion and ANSYS]
+image: /assets/images/Torque wrench.png
 ---
 ![Shaded rendering of earlier version]({{ "/assets/images/radio-machine.jpg" | relative_url }}){: .inline-image-r style="width: 200px"}
 
