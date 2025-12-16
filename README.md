@@ -16,7 +16,7 @@ a Fatigue FoS constraint of ≥ 1.5, and an output voltage ≥ 1 mV/V.
 
 For my design, I selected Ti-6Al-4V because its high yield strength allows the wrench to avoid permanent deformation and failure under peak torque. However, its elastic modulus is relatively low, which enables it to be slightly flexible and allows for higher-sensitivity strain-gauge measurement. The material also offers strong fatigue resistance, supporting multiple loading cycles, and high fracture toughness, which slows crack growth from small flaws. 
 
-[Condition of the beam](assets/images/Beam_condition.png){: .inline-image-r style="width: 200px"}
+[Condition of the beam](assets/images/Beam condition.png){: .inline-image-r style="width: 200px"}
 
 For the FEM model, I first apply the displacement condition (Yellow) on the drive, telling the software that it does not move. I set the displacement to (0, 0, 0). Then I applied the force at the edge of the beam (red face) with a force of 37.5 lbf in the y direction, which allowed the software to determine the bending of the beam.
 
