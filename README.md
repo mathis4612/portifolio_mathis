@@ -1,232 +1,39 @@
-# Portfolio Instructions
-
-This is a template for you to start building your professional portfolio. It is also part of your journey at MAE and will be reviewed, as needed, by your instructor and the Undergraduate Program Office.
-
-Note that this is your personal copy of the portfolio template repository. It was created automatically when you accepted the Assignment through the GitHub Classroom link you were provided.
-
-## Portfolio Editing Workflow
-The workflow of editing and publishing your portfolio goes as follows:
-
-1. **Create a local copy** of your portfolio, either on your computer or in an online "Codespace".
-2. **Edit any relevant template files**, add images, new project pages, text, etc. Remember to [commit](https://docs.github.com/en/get-started/using-git/about-git#basic-git-commands) often to save your progress.
-3. Test out your portfolio by **running a local test server** and see if it looks as planned.
-4. If you're happy, make sure everything is committed and **push your changes to Github**. This will publish your portfolio on the Internet.
-5. Rinse and repeat from Step 2 above. 
-
 ---
-
-## Creating a Local Copy
-There are three ways to set up a working copy of the portfolio code for you to edit. From easy to hard: you can either **create an online workspace** on called "Codespace", or clone the code directly **inside Visual Studio Code** for editing, committing, and pushing, or **use the git command line interface (CLI)** to maintain your local copy.
-
-### Using Visual Studio Code
-
-You can use [VS Code](https://code.visualstudio.com/) to clone your code, edit, test, and publish it from your laptop. This means you can work offline and generally have full control of your code. 
-
-Download and install VS Code. When you open it, choose "Clone Git Repository" to start a new project from your repository. Then enter the repo URL (also under the "Code" button in GitHub). 
-
-<img src="assets/images/vscode-clone.jpg" width="500" />
-
-
-You can then use VS Code for editing and [Git actions](https://code.visualstudio.com/docs/sourcecontrol/overview). Please refer to the [VS Code documentation](https://code.visualstudio.com/docs/) for more information. 
-
-### Using Codespaces
-
-Alternatively, you can use the online [Codespaces](https://github.com/features/codespaces) environments for development. Please read more about this feature through the following [link](https://github.com/features/codespaces). This option is available to you through the "Code" button as shown in the image below. This starts an online space for you to edit, test, and commit your work.
-
-<img src="assets/images/codespace-button.png" width="400" />
-
-### Using the Git CLI
-
-Finally, if you are an advanced user, you can simply clone your repository to your local machine using the Git command line interface in the terminal, and then use any text editing software you prefer to edit the files. 
-
-Use the terminal to commit and push your files and run the local test server.
-
-```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-```
-
+layout: project
+title: Torque wrench CAD Rendering
+description: Advanced CAD Project
+technologies: [Autodesk Fusion and ANSYS]
+image: /assets/images/Torque wrench.png
 ---
+This project aims to design a beam that would meet the constraints demanded. It had to withstand a torque of 600 in-lbf, have a Yield/Brittle FoS constraint of ≥ 4, a crack growth FoS constraint of ≥ 2,
+a Fatigue FoS constraint of ≥ 1.5, and an output voltage ≥ 1 mV/V.
 
-## Editing the Files to Personalize Your Portfolio
+![Shaded rendering of earlier version]({{ "/assets/images/Driver.png" | relative_url }}){: .inline-image-r style="width: 200px"}
+![Shaded rendering of earlier version]({{ "/assets/images/Sketch.png" | relative_url }}){: .inline-image-r style="width: 200px"}
+![Shaded rendering of earlier version]({{ "/assets/images/Mesurements.png" | relative_url }}){: .inline-image-r style="width: 200px"}
 
-GitHub Pages, the framework powering the portfolio system, uses [Jekyll](https://jekyllrb.com/) as the core technology. This means you will use [GitHub Pages Markdown](https://www.markdownguide.org/tools/github-pages/) to edit your files. 
+For my design, I selected Ti-6Al-4V because its high yield strength allows the wrench to avoid permanent deformation and failure under peak torque. However, its elastic modulus is relatively low, which enables it to be slightly flexible and allows for higher-sensitivity strain-gauge measurement. The material also offers strong fatigue resistance, supporting multiple loading cycles, and high fracture toughness, which slows crack growth from small flaws. 
 
-### Name
+![Shaded rendering of earlier version]({{ "/assets/images/Beam condition.png" | relative_url }}){: .inline-image-r style="width: 200px"}
 
-Change references to `<Your Name>` to your actual name in the following files:
-- `_config.yml`
-- `index.md`
-- `projects.md`
-- `cv.md`
+For the FEM model, I first apply the displacement condition (Yellow) on the drive, telling the software that it does not move. I set the displacement to (0, 0, 0). Then I applied the force at the edge of the beam (red face) with a force of 37.5 lbf in the y direction, which allowed the software to determine the bending of the beam.
 
-No need to keep the `< >` brackets. They are just there to indicate placeholders.
+![Shaded rendering of earlier version]({{ "/assets/images/Material.png" | relative_url }}){: .inline-image-r style="width: 200px"}
 
-### Homepage
-- `index.md`: Replace the placeholder text with a welcome or pitch paragraph about yourself.
-- `assets/images/profile-pic.jpg`: Replace the placeholder with a portrait of yourself.
+Next, I defined to the software what kind of material I was using by giving it the Young’s modulus and the Poisson's ratio. Giving the software the necessary components to calculate the displacement, stress, and strain of the beam.
 
-### Projects
-- In the `_projects` folder: Use the provided example pages (e.g., `2022-trig-analysis.md`) to build one page per project.
-- Each project has a main (square) project image, set in the page's top matter by the `image` variable.
-- All images are in `assets/images`. Delete the ones you don't need.
-- It is useful to name the page with a leading date. This will determine the order of projects on your main portfolio gallery.
-- You can also develop another ordering by naming the projects with some numerical prefix.
-- The example project pages show you how to include code and images in the portfolio page.
-- Refer to the Jekyll Markdown documentation for other formatting tips
+![Shaded rendering of earlier version]({{ "/assets/images/Normal strain contours.png" | relative_url }}){: .inline-image-r style="width: 200px"}
+![Shaded rendering of earlier version]({{ "/assets/images/Contour plot of maximum principal stress.png" | relative_url }}){: .inline-image-r style="width: 200px"}
+(Used max stress under clamped boundary line since indicated max is likely artificial)
+![Shaded rendering of earlier version]({{ "/assets/images/Static Structural.png" | relative_url }}){: .inline-image-r style="width: 200px"}
 
-### CV
-- `assets/CV.pdf`: Replace this placeholder with your own PDF CV.
-- You can either edit or delete the placeholder CV markdown text.
+I can see at the base of the drive that the maximum and minimum normal stress occur (indicated max/min stresses at the clamp-handle intersection are assumed to be artificial), with the largest magnitude value being 31,727 psi in tension. Using this value gives a safety factor against yielding of 3.8 which is slightly lower than the required safety factor against yielding of 4. The hand calculations predicted that the wrench would have a significantly larger factor of safety with the selected material and dimensions based on beam theory.
 
-### Color Schemes
+![Shaded rendering of earlier version]({{ "/assets/images/Displacement.png" | relative_url }}){: .inline-image-r style="width: 200px"}
+The load point deflection from the FEM is 0.40865in, which is only slightly higher than the hand-calculated displacement of 0.3448 in.
 
-The provided template comes with multiple color schemes. To choose a scheme:
+![Shaded rendering of earlier version]({{ "/assets/images/Strain gauge.png" | relative_url }}){: .inline-image-r style="width: 200px"}
 
-1. Open the `_config.yml` file.
-2. Look for the `color_scheme` setting.
-3. Change the value to the desired skin name. Refer to the inline comment in `_config.yml` for available skin options.
+The strain at the location of the strain gauge has a magnitude of 1136.6 microstrain or 0.0011366 strain. The hand-calculated strain gauge strain was 1212 microstrain, which is very close to and also above the output voltage ≥ 1 mV/V. So, based on the FEM strain gauge strain of 0.0011366 and the hand calculations, the torque wrench sensitivity is 0.0011366 mV/V, which meets the minimum sensitivity requirement of 0.001 mV/V. From the DwyerOmega catalog, I found that gauge “SGD-3/120-LY11” works best with our design. The type is described as “3 mm Grid Length, 1.5 mm Grid Width, 120 Resistance, ST STC Number”. Since I want a gauge on both sides of the wrench where tension and compression are happening, we need the gauge length to be less than the wrench length and the gauge width to be less than the wrench thickness. The carrier length of 7.8mm is significantly smaller than the length of the wrench, and the carrier width of 3.8mm is smaller than the wrench thickness (0.5 in or 12.7 mm); therefore, this gauge fits well within the wrench. The thickness of the gauges (3.15 mm) is also much smaller than the width of the wrench (0.6 in or 15.24 mm), so the gauges will definitely have enough space.
 
-
-Example:
-```yaml
-skin: aqua
-```
-
-### More Customization
-You can also change the style of any component of the portfolio editing the `custom.scss` file, which is written in the [Sass](https://sass-lang.com/) language.
-
----
-
-## Running the Site Locally
-
-Once you made your changes, or at any time you wish to, you can test your changes locally, by running `bundle`. All of this happens **in the terminal**, either on Codespaces, or in VS Code, or directly in your terminal app, depending on how you set up your local code.
-
-### Prerequisites
-
-To run `bundle`, you need Ruby installed on your machine. 
-
-For MacOS, the recommended path is to install [`homebrew`](https://brew.sh/): 
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-and then Ruby:
-```
-brew install ruby
-```
-
-Make sure your system uses the `homebrew` version, add the following line to either `~/.bashrc` or `~/.zshrc`. Do determine what shell you are using, you can run `echo $SHELL`.
-
-```
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-```
-
-Close your terminal and reopen it to load your configuration. Now verify that you have the latest Ruby version: 
-```
-ruby -v
-```
-
-On Windows, you can use [RubyInstaller](https://rubyinstaller.org/).
-
-### Install Packages (once)
-
-You only need to run this command the first time you try to run jekyll, to install the relevant packages: 
-```bash
-bundle install
-```
-
-### Running the Local Portfolio Server
-Then, to run the server you run the `jekyll serve` command:
-```bash
-bundle exec jekyll serve
-```
-
-Note that many updates to your code are automatically reloaded into the web server. However, some changes, notably to `_config.yml` require a restart of the jekyll server.
-
-You can access the site at the URL shown by the `serve` command. It looks something like this:
-```python
-    Server address: http://127.0.0.1:4000/
-  Server running... press ctrl-c to stop.
-```
-
----
-
-## Publishing your Portfolio to the Web
-
-### Push your Changes to GitHub
-
-Once everything looks good, commit and push your changes. In the command line, run the following commands. Ideally, you would have added and committed many times locally before pushing to Github.
-
-```bash
-git add .
-git commit -m "<Commit Edit>"
-git push origin main
-```
-
-In VS Code or Codespaces, you can use the Git interface inside the development environment to stage (add), commit, and push your changes.
-
-### Set Up GitHub Pages
-
-Follow these steps to publish your portfolio:
-
-1. In your `_config.yml` file, set the `baseurl` to your portfolio repo name (e.g., `"/spring-2025-portfolio-Hoffman/"`)
-
-
-1. Go to your repository's Settings
-<img src="assets/images/settings.png" width="600" />
-
-3. Choose the "Pages" tab under "Build and Deployment", verify that "Source" says "Deploy from a branch" and under "Branch" choose `main` and `/ (root)`
-<img src="assets/images/pages-settings.png" width="600" />
-
-4. Don't forget to save this setting at the bottom of the page.
-
-### Your Published Portfolio Site
-Your portfolio should be live at `https://cornell-mae-ug.github.io/<your-repo>/`, where `your-repo` is this repository's name, probably `portfolio-<your-github-username>`. This URL is also shown in your Pages setting tab.
-
-:tada:
-
-**You can now replace this template README file with a more informative text**, but check out additional tips and tricks below.
-
-### More Control over Publishing
-
-If you add plugins and add-ons, you might need to publish using your own Gemfile, and other custom actions. See the following link to learn everything about [publishing a Jekyll site with Github Pages](https://jekyllrb.com/docs/continuous-integration/github-actions/).
-
----
-
-## More Customization: Using Other Jekyll Themes
-
-As mentioned, your portfolio uses [Jekyll](https://jekyllrb.com/) underneath the hood. For more advanced styling of your portfolio, check out [this documentation](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll).
-
-This also means that you can customize your portfolio to a greater extent by using other Jekyll themes. Here are some good places to find themes:
-
-- [Start Bootstrap](https://startbootstrap.com/themes/jekyll/)
-- [Jekyll Themes](https://jekyllthemes.io/)
-- [Jekyll Theme](http://jekylltheme.org/)
-- [Jekyll Themes on GitHub](https://github.com/topics/jekyll-theme)
-
-Follow the theme's installation and customization instructions as needed to fit your portfolio content.
-
-## Tips and Tricks
-
-### Commenting Out Content
-
-You can comment out a bit of text or an image by using the `{% comment %}` command:
-
-```ruby
-{% comment %}
-    Stuff you want to comment out.
-{% endcomment %}
-```
-
-### Changing the text width
-
-Change any styling by editing the `custom.scss` file, a Sass file, which is a superset of CSS.
-
-For example, change the text width by changing the `max-width` of `.container`:
-
-```css
-.container {
-  max-width: 1000px;
-}
-```
+All in all, I can see that my design of the beam meets almost all the criteria, and this is mainly due to the hand calculation having implicite assumptions to simplify the problem which when comparing to the real world just doesn't yeild the same results which is why we can see a difference in my results and also a difference in the behavior of the beam.
