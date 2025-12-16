@@ -8,8 +8,10 @@ image: /assets/images/Torque wrench.png
 This project aims to design a beam that would meet the constraints demanded. It had to withstand a torque of 600 in-lbf, have a Yield/Brittle FoS constraint of ≥ 4, a crack growth FoS constraint of ≥ 2,
 a Fatigue FoS constraint of ≥ 1.5, and an output voltage ≥ 1 mV/V.
 
-[Shaded rendering of earlier version]({{ "/assets/images/Driver.png" | relative_url }}){: .inline-image-r style="width: 200px"}
+[Shaded rendering of earlier version](/assets/images/Driver.png"){: .inline-image-r style="width: 200px"}
+
 [Shaded rendering of earlier version]({{ "/assets/images/Sketch.png" | relative_url }}){: .inline-image-r style="width: 200px"}
+
 [Shaded rendering of earlier version]({{ "/assets/images/Mesurements.png" | relative_url }}){: .inline-image-r style="width: 200px"}
 
 For my design, I selected Ti-6Al-4V because its high yield strength allows the wrench to avoid permanent deformation and failure under peak torque. However, its elastic modulus is relatively low, which enables it to be slightly flexible and allows for higher-sensitivity strain-gauge measurement. The material also offers strong fatigue resistance, supporting multiple loading cycles, and high fracture toughness, which slows crack growth from small flaws. 
