@@ -38,6 +38,9 @@ So all in all, every part of the pump is sized so the pressure is high enough fo
 
 For this specific pump, we can use Bernoulli's equation <img src="https://your-image-url.png" width="300" alt="Alt Text">
 
-This formula can be simplified in this scenario quite a bit, as many terms cancel to 0. To begin with, our z2 is going to be a set value, determined by where we put the end of the hose. Our starting velocity is 0, as the pump sits at rest with no forces or flowing air in it before we begin pumping.
+This formula can be simplified in this scenario quite a bit, as many terms cancel to 0. To begin with, our z2 is going to be a set value, determined by where we put the end of the hose. Our starting velocity is 0, as the pump sits at rest with no forces or flowing air in it before we begin pumping.<img src="https://your-image-url.png" width="300" alt="Alt Text">
 
+We will look at the situation in which the tire is unfilled, and thus p2 is equal to 0.
+p1=F/A, rho=1.225, z2 = 0 to 104 cm, z1 is dependent on when in the pull cycle we are at, A = 0.05^2*pi=0.00785398163397, hL=1.04, D=0.02 and theoretically F depends on the tire pressure, since people apply very differing forces depending on the pressure opposing. 
 
+For our example we will use z2 = 50 cm, and we will evaluate at z1 = 0, thus
