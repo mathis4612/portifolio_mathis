@@ -8,7 +8,7 @@ image: /assets/images/Torque wrench.png
 This project aims to design a beam that would meet the constraints demanded. It had to withstand a torque of 600 in-lbf, have a Yield/Brittle FoS constraint of ≥ 4, a crack growth FoS constraint of ≥ 2,
 a Fatigue FoS constraint of ≥ 1.5, and an output voltage ≥ 1 mV/V.
 
-![Driver](assets/images/Driver.png)
+![Driver](portifolio_mathis/assets/images/Driver.png)
 
 ![Sketch](assets/images/Sketch.png)
 
