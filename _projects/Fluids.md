@@ -18,7 +18,7 @@ These measurements will help us perform more detailed calculations later about t
 
 The pump has connected tubes that function as short pipes with check valves. Flow through these passages is driven by pressure differences rather than by external freestream effects, and the air remains confined within solid walls throughout the process. As a result, the pump is fundamentally a container–pipe system governed by unsteady internal flow and the conservation of mass and momentum, rather than an airfoil-type flow device.
 
-The equation used is Bernoulli's equations which is <img src="https://your-image-url.png" width="300" alt="Alt Text">
+The equation used is Bernoulli's equations which is <img src=/assets/images/Bernoullis_eq width="300" alt="Alt Text">
 
 --> p/rho describes the pressure energy per unit mass created by the piston motion
 
