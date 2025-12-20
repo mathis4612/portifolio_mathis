@@ -1,1 +1,1 @@
-Welcome! My name is Mathis Vigneau, and I am a mechanical engineer. If you want to know more about me I invite you to take a look ![here](/index.md) You can see all of my projects that I completed inthere. You can see [my resume here](assets/Resume.pdf)
+Welcome! My name is Mathis Vigneau, and I am a mechanical engineer. If you want to know more about me I invite you to take a look [here](/index.md) You can see all of my projects that I completed inthere. You can see [my resume here](assets/Resume.pdf)
