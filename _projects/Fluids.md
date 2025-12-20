@@ -38,9 +38,18 @@ So all in all, every part of the pump is sized so the pressure is high enough fo
 
 For this specific pump, we can use Bernoulli's equation <img src=/assets/images/Bernoulli_eq.png width="400" alt="Alt Text">
 
-This formula can be simplified in this scenario quite a bit, as many terms cancel to 0. To begin with, our z2 is going to be a set value, determined by where we put the end of the hose. Our starting velocity is 0, as the pump sits at rest with no forces or flowing air in it before we begin pumping.<img src=/assets/images/Initial_Bernoulli_eq.png width="300" alt="Alt Text">
+This formula can be simplified in this scenario quite a bit, as many terms cancel to 0. To begin with, our z2 is going to be a set value, determined by where we put the end of the hose. Our starting velocity is 0, as the pump sits at rest with no forces or flowing air in it before we begin pumping.
+<img src=/assets/images/Initial_Bernoulli_eq.png width="300" alt="Alt Text">
 
 We will look at the situation in which the tire is unfilled, and thus p2 is equal to 0.
 p1=F/A, rho=1.225, z2 = 0 to 104 cm, z1 is dependent on when in the pull cycle we are at, A = 0.05^2*pi=0.00785398163397, hL=1.04, D=0.02 and theoretically F depends on the tire pressure, since people apply very differing forces depending on the pressure opposing. 
 
-For our example we will use z2 = 50 cm, and we will evaluate at z1 = 0, thus
+For our example we will use z2 = 50 cm, and we will evaluate at z1 = 0, thus <img src=/assets/images/Speed.png width="175" alt="Alt Text">
+
+<img src=/assets/images/Speed2.png width="150" alt="Alt Text"> which is transcendental, so we iterate by trying different U’s to find the correct value. 
+<img src=/assets/images/Speed3.png width="250" alt="Alt Text">
+
+We assumed U=5 which gave us a a Reynold number of Re=3.5e5 with Re=(rho*U*L)/mu
+f=0.014858958600689075 which gives us back U=101.920885553. Then we go back to the reynold number which gives us a new number. At the end of repeating this process we finally get U=99.8035224963
+
+Now we calculate for efficiency <img src=/assets/images/Efficiency.png width="250" alt="Alt Text">
