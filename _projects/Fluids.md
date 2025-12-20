@@ -18,7 +18,7 @@ These measurements will help us perform more detailed calculations later about t
 
 The pump has connected tubes that function as short pipes with check valves. Flow through these passages is driven by pressure differences rather than by external freestream effects, and the air remains confined within solid walls throughout the process. As a result, the pump is fundamentally a container–pipe system governed by unsteady internal flow and the conservation of mass and momentum, rather than an airfoil-type flow device.
 
-The equation used is Bernoulli's equations which is <img src=/assets/images/Bernoullis_eq width="300" alt="Alt Text">
+The equation used is Bernoulli's equations which is <img src=/assets/images/Bernoulli_eq.png width="400" alt="Alt Text">
 
 --> p/rho describes the pressure energy per unit mass created by the piston motion
 
@@ -36,9 +36,9 @@ Using these parameters, we can explain why the pump is designed the way it is. I
 Finally, if the working fluid had much higher viscosity honey the Reynolds number would collapse to nearly zero and the pump simply wouldn’t work.
 So all in all, every part of the pump is sized so the pressure is high enough for the tire, but still low enough for a human to push
 
-For this specific pump, we can use Bernoulli's equation <img src="https://your-image-url.png" width="300" alt="Alt Text">
+For this specific pump, we can use Bernoulli's equation <img src=/assets/images/Bernoulli_eq.png width="400" alt="Alt Text">
 
-This formula can be simplified in this scenario quite a bit, as many terms cancel to 0. To begin with, our z2 is going to be a set value, determined by where we put the end of the hose. Our starting velocity is 0, as the pump sits at rest with no forces or flowing air in it before we begin pumping.<img src="https://your-image-url.png" width="300" alt="Alt Text">
+This formula can be simplified in this scenario quite a bit, as many terms cancel to 0. To begin with, our z2 is going to be a set value, determined by where we put the end of the hose. Our starting velocity is 0, as the pump sits at rest with no forces or flowing air in it before we begin pumping.<img src=/assets/images/Initial_Bernoulli_eq.png width="300" alt="Alt Text">
 
 We will look at the situation in which the tire is unfilled, and thus p2 is equal to 0.
 p1=F/A, rho=1.225, z2 = 0 to 104 cm, z1 is dependent on when in the pull cycle we are at, A = 0.05^2*pi=0.00785398163397, hL=1.04, D=0.02 and theoretically F depends on the tire pressure, since people apply very differing forces depending on the pressure opposing. 
