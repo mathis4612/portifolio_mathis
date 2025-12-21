@@ -62,13 +62,64 @@ In this form, we see that the equation is now in the form of #12, where a is R/L
 
 This equation describes the current over time, which ultimately leads to a second-order system. However, since electric dynamics happen extremely quickly, the system effectively behaves as a first-order system, and we can make the assumption:
 
-<img src=/assets/images/first_order_equations.png alt="Alt Text" width="250">
+<img src=/assets/images/first_order_equations.png alt="Alt Text" width="150">
 
-Now, we can repeat this process to find w(t): <img src=/assets/images/repeat_process_wt.png alt="Alt Text" width="250">
+Now, we can repeat this process to find w(t): 
 
-Plug in i(t) assuming i(t)=Un/R: <img src=/assets/images/UnR.png alt="Alt Text" width="250">
-Transform to the frequency domain with zero initial conditions: <img src=/assets/images/frequency_domain_initial_zero.png alt="Alt Text" width="250">
-Find w(s):<img src=/assets/images/find_w(s).png alt="Alt Text" width="250">
-Also similar to #12 so convert: <img src=/assets/images/convert.png alt="Alt Text" width="250">
-Convert to time domain using table: <img src=/assets/images/time_domain_using_table.png alt="Alt Text" width="250">
+<img src=/assets/images/repeat_process_wt.png alt="Alt Text" width="500">
 
+Plug in i(t) assuming i(t)=Un/R: 
+
+<img src=/assets/images/UnR.png alt="Alt Text" width="300">
+
+Transform to the frequency domain with zero initial conditions: 
+
+<img src=/assets/images/frequency_domain_initial_zero.png alt="Alt Text" width="300">
+
+Find w(s):
+
+<img src=/assets/images/find_w(s).png alt="Alt Text" width="200">
+
+Also similar to #12 so convert: 
+
+<img src=/assets/images/convert.png alt="Alt Text" width="250">
+
+Convert to time domain using table: 
+
+<img src=/assets/images/time_domain_using_table.png alt="Alt Text" width="250">
+
+
+And now we have an equation that describes the rotational speed in terms of the defined parameters. From this equation, we can see that the steady state solution is (Ka*Un)/(b*R), which makes sense according to the parameters included and the fact that the rotational inertia is not included since it physically should not affect the final rotational speed value, just the time to reach the steady state. Graphing this system analytically gives us an idea of how the system behaves.
+
+<img src=/assets/images/Graph.png alt="Alt Text" width="250">
+As expected, rotational speed increases rapidly in the beginning from zero to the steady state value and then remains steady. Depending on the values of b and I, the system exhibits different settling times, with b>I showing faster settling times and I>b showing slower settling times. This shows that as engineers, we want to have large damping and small rotational inertia to optimize reaching the ideal rpm the fastest and carefully choose Ka, Un, b, R  to allow the system to produce different steady state rotational speeds that a user might want.
+
+
+---
+Step Response and Parameter Estimation
+---
+
+The Honeywell turbofan adjusts its speed by modulating the motor current rather than using PWM or direct voltage control. Therefore, the appropriate input for the step response is the commanded speed signal, since this is the control variable that causes a sudden change in motor current. The step response is obtained by applying a step change in the speed command and recording the resulting fan speed over time.
+
+Unfortunately, we could not measure the rotating speed of the Honeywell fan nor read the input that the system is trying to achieve since the speeds are only described as “1, 2, 3” and we were not able to find information on the input voltages for these settings nor discern it from the dissection. Nevertheless, we were able to use video recordings to find the settling times by comparing the time from turning the knob to achieving stable fan rotation.
+
+For speed 1: ts = 3.0 seconds
+
+For speed 2: ts = 2.4 seconds
+
+For speed 3: ts = 1.7 seconds
+
+---
+System Assessment + Improvements
+---
+
+Overall, the Honeywell Room Fan is designed very effectively in terms of system design. Having the system open loop is the right decision, as the goal of the fan is very simple and does not need to have a PID/feedback loop for its system. The rise time is very short as it reaches its steady state in a very short amount of time. This is because the fan is designed to have low rotational inertia and sufficent enough damping, as shown in the ODE and Transfer Functions section,  so the amount of torque necessary to accelerate it is low, and thus each setting has enough voltage to make it move comfortably. Other great decision choices include low weight, which allows the user to place the fan anywhere they want and even on the wall, a user-friendly design, as it is very simple to use with a single indicative knob to control the fan, and high rotatability, allowing the fan to rotate up to 90 degrees vertically to meet user needs. 
+
+Some improvements that could be made would be to add a feature to make it a closed loop by adding feedback control. If the system could sense the temperature of the room, then it could modify its speed or turn off and on without the user's intervention. To make this possible, it would need to possess high-accuracy sensors that could well assess the environment from the location of the fan. Other practical suggestions include making the fan more accessible for cleaning/lubrication, since dust build up inside the system proves to be a common issue. 
+
+---
+References
+---
+[Honeywell turbofan]([https://example.com/your-link-url](https://www.honeywellstore.com/store/products/honeywell-turboforce-air-circulator-fan-ht-900.htm#:~:text=In%20the%20winter%20months%2C%20the,pair%20with%20a%20heating%20system.&text=Unique%20blade%20design%20creates%20less,away)) [1]
+
+MAE 3260 laplace table [2] <img src=/assets/images/laplace_table.png alt="Alt Text" width="250">
