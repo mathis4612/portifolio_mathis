@@ -48,18 +48,27 @@ Thinking about this physically, this time constant makes sense since higher iner
 
 Thinking about this physically, this time constant makes sense since higher inductance resists changes in current, causing the current to rise more slowly when the input voltage changes, while higher resistance causes the system to stabilize faster.
 
-To find (t), we first need to find i(t). Converting it to the frequency domain gives us: (No initial i or change in i so initial conditions equal 0)
-<img src=/assets/images/frequency_domain.png alt="Alt Text" width="500">  Solving for i(s),
-<img src=/assets/images/solve_Is.png alt="Alt Text" width="500">
+To find (t), we first need to find i(t). Converting it to the frequency domain gives us: (No initial i or change in i, so initial conditions equal 0)
+<img src=/assets/images/frequency_domain.png alt="Alt Text" width="350">  Solving for i(s),
+<img src=/assets/images/solve_Is.png alt="Alt Text" width="250">
 
 Now, we have an equation that can be used to find the equation for i(t) using the MAE 3260 Laplace table [2].  This expression best matches #12 in the table, where as(s+a) in the frequency domain equals 1-e-at in the time domain. To be able to use the table, we must first transform the equation to be similar to #12.
 
-<img src=/assets/images/transform_equation.png alt="Alt Text" width="500">
+<img src=/assets/images/transform_equation.png alt="Alt Text" width="400">
 
-In this form, we see that the equation is now in the form of #12 where a is R/L and Un/R the gain term. Hence, we can now solve for (t) and we get:
+In this form, we see that the equation is now in the form of #12, where a is R/L and Un/R the gain term. Hence, we can now solve for (t) and we get:
 
 <img src=/assets/images/wt_eq.png alt="Alt Text" width="500">
 
-This equation describes the current with time which ends up leading to a second order system. However, since electric dynamics happen extremely quickly, the system effectively behaves as a first order system and we can make the assumption:
+This equation describes the current over time, which ultimately leads to a second-order system. However, since electric dynamics happen extremely quickly, the system effectively behaves as a first-order system, and we can make the assumption:
 
-<img src=/assets/images/first_order_equations.png alt="Alt Text" width="500">
+<img src=/assets/images/first_order_equations.png alt="Alt Text" width="250">
+
+Now, we can repeat this process to find w(t): <img src=/assets/images/repeat_process_wt.png alt="Alt Text" width="250">
+
+Plug in i(t) assuming i(t)=Un/R: <img src=/assets/images/UnR.png alt="Alt Text" width="250">
+Transform to the frequency domain with zero initial conditions: <img src=/assets/images/frequency_domain_initial_zero.png alt="Alt Text" width="250">
+Find w(s):<img src=/assets/images/find_w(s).png alt="Alt Text" width="250">
+Also similar to #12 so convert: <img src=/assets/images/convert.png alt="Alt Text" width="250">
+Convert to time domain using table: <img src=/assets/images/time_domain_using_table.png alt="Alt Text" width="250">
+
