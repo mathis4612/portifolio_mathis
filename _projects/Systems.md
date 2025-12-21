@@ -125,6 +125,3 @@ References
 MAE 3260 laplace table [2] 
 
 <img src=/assets/images/laplace_table.png alt="Alt Text" width="350">
-
-
-
