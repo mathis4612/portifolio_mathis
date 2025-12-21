@@ -91,7 +91,7 @@ Convert to time domain using table:
 
 And now we have an equation that describes the rotational speed in terms of the defined parameters. From this equation, we can see that the steady state solution is (Ka*Un)/(b*R), which makes sense according to the parameters included and the fact that the rotational inertia is not included since it physically should not affect the final rotational speed value, just the time to reach the steady state. Graphing this system analytically gives us an idea of how the system behaves.
 
-<img src=/assets/images/Graph.png alt="Alt Text" width="250">
+<img src=/assets/images/Graph.png alt="Alt Text" width="500">
 As expected, rotational speed increases rapidly in the beginning from zero to the steady state value and then remains steady. Depending on the values of b and I, the system exhibits different settling times, with b>I showing faster settling times and I>b showing slower settling times. This shows that as engineers, we want to have large damping and small rotational inertia to optimize reaching the ideal rpm the fastest and carefully choose Ka, Un, b, R  to allow the system to produce different steady state rotational speeds that a user might want.
 
 
@@ -122,4 +122,7 @@ References
 ---
 [Honeywell turbofan]([https://example.com/your-link-url](https://www.honeywellstore.com/store/products/honeywell-turboforce-air-circulator-fan-ht-900.htm#:~:text=In%20the%20winter%20months%2C%20the,pair%20with%20a%20heating%20system.&text=Unique%20blade%20design%20creates%20less,away)) [1]
 
-MAE 3260 laplace table [2] <img src=/assets/images/laplace_table.png alt="Alt Text" width="250">
+MAE 3260 laplace table [2] 
+
+<img src=/assets/images/laplace_table.png alt="Alt Text" width="350">
+
