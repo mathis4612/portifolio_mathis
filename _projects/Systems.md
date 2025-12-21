@@ -120,9 +120,10 @@ Some improvements that could be made would be to add a feature to make it a clos
 ---
 References
 ---
-[Honeywell turbofan]([https://example.com/your-link-url](https://www.honeywellstore.com/store/products/honeywell-turboforce-air-circulator-fan-ht-900.htm#:~:text=In%20the%20winter%20months%2C%20the,pair%20with%20a%20heating%20system.&text=Unique%20blade%20design%20creates%20less,away)) [1]
+[Honeywell turbofan]((https://www.honeywellstore.com/store/products/honeywell-turboforce-air-circulator-fan-ht-900.htm#:~:text=In%20the%20winter%20months%2C%20the,pair%20with%20a%20heating%20system.&text=Unique%20blade%20design%20creates%20less,away)) [1]
 
 MAE 3260 laplace table [2] 
 
 <img src=/assets/images/laplace_table.png alt="Alt Text" width="350">
+
 
