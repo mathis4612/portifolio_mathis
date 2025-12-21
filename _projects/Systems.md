@@ -36,5 +36,14 @@ The fan works as an open loop system since the user provides an input to set the
 
 In this model, the disturbance torque Td ​represents external disturbance torques such as friction changes and airflow interactions; however, for a typical room fan in a controlled environment, I assume that these disturbances are negligible (Td0), so they will be omitted from the model going forward, and T will be equal to Tu, which equals Kai(t).
 
-Rearranging, we can find the time constant  for the electrical and mechanical equations:
+Rearranging, we can find the time constant  for the electrical and mechanical equations: <img src=/assets/images/Model.png alt="Alt Text" width="500">
 
+The mechanical time constant is the term in front of the rotational speed derivative, which is I/b, hence, <img src=/assets/images/Model.png alt="Alt Text" width="500">
+
+Thinking about this physically, this time constant makes sense since higher inertia means more resistance to motion and slower acceleration, and higher damping means faster settling, so smaller settling time.
+
+The electrical time constant is the term in front of the current derivative, which is L/R; hence, <img src=/assets/images/Model.png alt="Alt Text" width="500">
+Thinking about this physically, this time constant makes sense since higher inductance resists changes in current, causing the current to rise more slowly when the input voltage changes, while higher resistance causes the system to stabilize faster.
+
+To find (t), we first need to find i(t). Converting it to the frequency domain gives us: (No initial i or change in i so initial conditions equal 0)
+<img src=/assets/images/Model.png alt="Alt Text" width="500">
