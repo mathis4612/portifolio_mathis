@@ -16,7 +16,7 @@ The TurboForce fan system is a fan produced by the company Honeywell. This fan p
 
 <img src=/assets/images/Fan_knob.png alt="Alt Text" width="300">
 
-When the knob is turned, the fan controller mechanically switches between different electrical configurations that correspond to the different speeds wanted. Each configuration has a different impedance so selecting a higher speed applies a higher effective voltage to the motor windings. Higher effective voltage produces a larger current in the coils, which generates a stronger magnetic field and increases the motor’s torque and therefore rotational speed.
+When the knob is turned, the fan controller mechanically switches between different electrical configurations that correspond to the different speeds wanted. Each configuration has a different impedance, so selecting a higher speed applies a higher effective voltage to the motor windings. Higher effective voltage produces a larger current in the coils, which generates a stronger magnetic field and increases the motor’s torque and therefore rotational speed.
 
 <img src=/assets/images/Fan_motor.png alt="Alt Text" width="500">
 
@@ -56,7 +56,7 @@ Now, we have an equation that can be used to find the equation for i(t) using th
 
 <img src=/assets/images/transform_equation.png alt="Alt Text" width="400">
 
-In this form, we see that the equation is now in the form of #12, where a is R/L and Un/R the gain term. Hence, we can now solve for (t) and we get:
+In this form, we see that the equation is now in the form of #12, where a is R/L and Un/R is the gain term. Hence, we can now solve for (t), and we get:
 
 <img src=/assets/images/wt_eq.png alt="Alt Text" width="500">
 
@@ -80,11 +80,11 @@ Find w(s):
 
 <img src=/assets/images/find_w(s).png alt="Alt Text" width="200">
 
-Also similar to #12 so convert: 
+Also similar to #12, so convert: 
 
 <img src=/assets/images/convert.png alt="Alt Text" width="250">
 
-Convert to time domain using table: 
+Convert to the time domain using the table: 
 
 <img src=/assets/images/time_domain_using_table.png alt="Alt Text" width="250">
 
@@ -101,7 +101,7 @@ Step Response and Parameter Estimation
 
 The Honeywell turbofan adjusts its speed by modulating the motor current rather than using PWM or direct voltage control. Therefore, the appropriate input for the step response is the commanded speed signal, since this is the control variable that causes a sudden change in motor current. The step response is obtained by applying a step change in the speed command and recording the resulting fan speed over time.
 
-Unfortunately, we could not measure the rotating speed of the Honeywell fan nor read the input that the system is trying to achieve since the speeds are only described as “1, 2, 3” and we were not able to find information on the input voltages for these settings nor discern it from the dissection. Nevertheless, we were able to use video recordings to find the settling times by comparing the time from turning the knob to achieving stable fan rotation.
+Unfortunately, we could not measure the rotating speed of the Honeywell fan nor read the input that the system is trying to achieve, since the speeds are only described as “1, 2, 3” and we were not able to find information on the input voltages for these settings, nor discern them from the dissection. Nevertheless, we were able to use video recordings to find the settling times by comparing the time from turning the knob to achieving stable fan rotation.
 
 For speed 1: ts = 3.0 seconds
 
@@ -125,3 +125,4 @@ References
 MAE 3260 laplace table [2] 
 
 <img src=/assets/images/laplace_table.png alt="Alt Text" width="350">
+
