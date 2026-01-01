@@ -2,9 +2,9 @@
 Bike pump dissection
 ---
 <img src=/assets/images/Bike_pump.png width="150" alt="Alt Text">
-In this project, I was put in a group to go and dissect an object and then anayse it with the help of the concepts and learning outcome that we have seen in our fluid mechanic class. Our object was a bike pump.
+In this project, I was put in a group to go and dissect an object and then analyze it with the help of the concepts and learning outcomes that we have seen in our fluid mechanics class. Our object was a bike pump.
 
-Our bike pump is specifically a dual-action pump, meaning that the pump generates output airflow on both the downstroke and the upstroke. The dual-action design, together with one-way valves allow the pump to maintain continuous volumetric airflow. 
+Our bike pump is specifically a dual-action pump, meaning that the pump generates output airflow on both the downstroke and the upstroke. The dual-action design, together with one-way valves, allows the pump to maintain continuous volumetric airflow. 
 The main chamber behaves as a piston cylinder container with a moving boundary. Inside the main chamber, we found two inner cylinders, each with its own one-way valve. On the upstroke, the control volume increases within the inner cylinder, creating a pressure lower than ambient and inducing inflow. However, due to the increased amount of air in the pump as a whole, the pressure in the outer cylinder increases, and the air is then pushed out through the outlet valve in the outer cylinder. During the downstroke, the actions reverse. Thus, by controlling the pressure inside the pump chamber, we are able to take advantage of the dual-action behavior.
 
 This pump is an example of a positive displacement pump, as each inner cylinder encloses a fixed control volume of air and displaces that volume through the system. 
@@ -42,7 +42,7 @@ The equation used is Bernoulli's equations which is <img src=/assets/images/Bern
 
 --> p/rho describes the pressure energy per unit mass created by the piston motion
 
---> v^2/2 describes the kinetic energy per unit mass of air as it accelerates as it moves through the narrow tubes
+--> v^2/2 describes the kinetic energy per unit mass of air as it accelerates through the narrow tubes
 
 --> g*z describes the gravitational potential energy per unit mass for the high difference along the tubes
 
