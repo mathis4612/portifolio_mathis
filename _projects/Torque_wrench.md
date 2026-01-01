@@ -28,7 +28,7 @@ Next, I defined to the software what kind of material I was using by giving it t
 
 ![Shaded rendering of earlier version](/assets/images/Static_Structural.png)
 
-I can see at the base of the drive that the maximum and minimum normal stress occur (indicated max/min stresses at the clamp-handle intersection are assumed to be artificial), with the largest magnitude value being 31,727 psi in tension. Using this value gives a safety factor against yielding of 3.8 which is slightly lower than the required safety factor against yielding of 4. The hand calculations predicted that the wrench would have a significantly larger factor of safety with the selected material and dimensions based on beam theory.
+I can see at the base of the drive that the maximum and minimum normal stress occur (indicated max/min stresses at the clamp-handle intersection are assumed to be artificial), with the largest magnitude value being 31,727 psi in tension. Using this value gives a safety factor against yielding of 3.8, which is slightly lower than the required safety factor against yielding of 4. The hand calculations predicted that the wrench would have a significantly larger factor of safety with the selected material and dimensions based on beam theory.
 
 ![Shaded rendering of earlier version](/assets/images/Displacement.png)
 The load point deflection from the FEM is 0.40865in, which is only slightly higher than the hand-calculated displacement of 0.3448 in.
