@@ -1,9 +1,3 @@
----
-layout: default
-title: Mathis Vigneau
-
----
-
 ## About Me
 
 
