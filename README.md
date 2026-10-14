@@ -1,7 +1,7 @@
 ## About Me
 
 
-![Profile Picture](/portifolio_mathis/assets/images/Profile_Picture.png)
+![Profile Picture](https://mathis4612.github.io/portifolio_mathis/assets/images/Profile_Picture.png)
 
  
 My name is Mathis Vigneau, and I am a Mechanical Engineering student at Cornell University with interests in semiconductors, hardware systems, and applied mechanical design. I am driven by a curiosity for how modern technology evolves from fundamental engineering principles.
@@ -12,6 +12,6 @@ I also serve as a Community Group Leader with CRU at Cornell, where I develop le
 
 Outside of engineering, I enjoy snowboarding, gaming, acting, and science fiction. 
 
-[Resume](assets/MATHIS_VIGNEAU.pdf) 
+[Resume](https://mathis4612.github.io/portifolio_mathis/assets/MATHIS_VIGNEAU.pdf)
 
 [Projects](/_projects)
