@@ -1,7 +1,7 @@
 ## About Me
 
 
-![Profile Picture](/assets/images/Profile_Picture.png)
+![Profile Picture](/portifolio_mathis/assets/images/Profile_Picture.png)
 
  
 My name is Mathis Vigneau, and I am a Mechanical Engineering student at Cornell University with interests in semiconductors, hardware systems, and applied mechanical design. I am driven by a curiosity for how modern technology evolves from fundamental engineering principles.
