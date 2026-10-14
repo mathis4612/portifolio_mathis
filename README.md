@@ -14,4 +14,4 @@ Outside of engineering, I enjoy snowboarding, gaming, acting, and science fictio
 
 [Resume](https://mathis4612.github.io/portifolio_mathis/assets/MATHIS_VIGNEAU.pdf)
 
-[Projects](/_projects)
+[[Projects](/_projects)](https://mathis4612.github.io/portifolio_mathis/projects/Fluids/)
