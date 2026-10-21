@@ -19,40 +19,43 @@ Aspiring engineering student with a strong foundation in.... Passionate about ..
 
 #### Education
 - **Cornell University**  
-  *Bachelor of Science in Mechanical and Aerospace Engineering*  
-  GPA: 3.8/4.0 | Graduation: Month, Year
-
-- **[High School Name]**  
-  *High School Diploma*  
-  Graduation: [Month, Year]
+  *Bachelor's in Mechanical Engineering*  
+  GPA: 2.9/4.0 | Graduation: May/2027
 
 ---
 
 #### Skills
-- **Software:** Autodesk Fusion 360, SolidWorks, ANSYS  
-- **Programming:** Python, MATLAB  
-- **Tools:** 3D Printing, Laser Cutting  
-
+- **Design & CAD Modeling:** SolidWorks, AutoCAD, Fusion 360
+- **Programming & Analysis:** MATLAB, Ansys Granta Edupack, Ansys Mechanical, Excel, Word, PowerPoint, Canva
+- **Mechanical Skills:** Thermodynamics & energy systems, structural analysis, rapid prototyping
 ---
 
 #### Projects
-- **[Project Title]**:  
-  *[Short Description]*  
-  - Key Achievement 1  
-  - Key Achievement 2  
+- **[Fluids project]**:  
+  *[In this project I am to study how a bike pump works under the perspective of fluid mechanics]*  
+  - Using the reynold number we were able to find the rate in which (depending on the diameter of the pump) we could see how fast the bike tire would be inflated
 
-- **[Project Title]**:  
-  *[Short Description]*  
-  - Key Achievement 1  
-  - Key Achievement 2  
+- **[Systems project]**:  
+  *[In this project I looked at how a fan works and how it self regulats itself such that we can have multiple different speeds for the fan]*  
+  - Figure out how to find the fan speed with just the current drawn from the fan
 
+- **[Materials project]**:  
+  *[Analysed how a beam would act under bending stress]*  
+  - Found weak point in our beam due to its geometry and anaylised on how to improve on the geometry
 ---
 
 #### Work Experience
-- **[Company Name] - Intern**  
-  [Month, Year] - [Month, Year]  
-  - Responsibility 1  
-  - Responsibility 2  
+- **[Binnies Hong Kong] - Mechanical Engineering Intern**  
+  [May, 2025] - [july, 2025]  
+  - Designing pump system control diagrams  
+  - Cost estimating for major WSD projects
+ 
+- **[PCI Pharma] - Mechanical Engineering Intern**
+  [May, 2025] - [july, 2025]
+  - Developed and revised SOPs and preventive maintenance procedures
+  - Created preventive maintenance plans (completion of forms, training materials, and spare-part documentation)
+ 
+- **[PCI Pharma] - Mechanical Engineering Intern**
 
 ---
 
