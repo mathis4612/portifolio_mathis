@@ -1,80 +1,84 @@
 ---
-Bike pump dissection
+layout: default
+title: Bike Pump Dissection
+image: /assets/images/Bike_pump.png
 ---
-<img src=/assets/images/Bike_pump.png width="150" alt="Alt Text">
-In this project, I was put in a group to go and dissect an object and then analyze it with the help of the concepts and learning outcomes that we have seen in our fluid mechanics class. Our object was a bike pump.
 
-Our bike pump is specifically a dual-action pump, meaning that the pump generates output airflow on both the downstroke and the upstroke. The dual-action design, together with one-way valves, allows the pump to maintain continuous volumetric airflow. 
-The main chamber behaves as a piston cylinder container with a moving boundary. Inside the main chamber, we found two inner cylinders, each with its own one-way valve. On the upstroke, the control volume increases within the inner cylinder, creating a pressure lower than ambient and inducing inflow. However, due to the increased amount of air in the pump as a whole, the pressure in the outer cylinder increases, and the air is then pushed out through the outlet valve in the outer cylinder. During the downstroke, the actions reverse. Thus, by controlling the pressure inside the pump chamber, we are able to take advantage of the dual-action behavior.
+# Bike Pump Dissection
 
-This pump is an example of a positive displacement pump, as each inner cylinder encloses a fixed control volume of air and displaces that volume through the system. 
+<img src="{{ '/assets/images/Bike_pump.png' | relative_url }}" width="150" alt="Bike pump dissection">
 
-<img src=/assets/images/Dissection.png width="600" alt="Alt Text">
+In this project, I was put in a group to go and dissect an object and then analyze it with the help of the concepts and learning outcomes that we have seen in our fluid mechanics class. Our object was a bike pump, and our analysis focused on how the pump converts mechanical work into airflow and pressure increase.
 
-To start our analysis, we removed the base plate cover by hand and then used a screwdriver to take out the seal, which exposed the pump’s inlet and outlet check valves. After that, we unscrewed the top cap, which let us see the handle mechanism. This mechanism uses a piston and an upper cap to pull air into the main cylinder during the upstroke. Taking off the cap also revealed two inner cylinders inside the main body, each connected to the inlet and outlet valves. We also removed the hose from the outlet port by hand.
+Our bike pump is specifically a dual-action pump, meaning that the pump generates output airflow on both the downstroke and the upstroke. The dual-action design, together with one-way valves, allows for continuous flow and efficient pressure generation.
 
-When the handle moves, it drives the piston up and down, creating low and high pressure inside the cylinder. This pressure change draws air in during the suction stroke and pushes it out during the compression stroke. The air flows through the inner passages, passes through the inlet and outlet valves, and leaves through the outlet port into the hose. The seal and gasket help prevent leaks, allowing the pump to maintain pressure and work efficiently.
+The main chamber behaves as a piston-cylinder container with a moving boundary. Inside the main chamber, we found two inner cylinders, each with its own one-way valve. On the upstroke, the control valve opens and allows air to enter the cylinder; on the downstroke, the check valve closes and the air is forced out.
 
-These are the measurements taken during the dissection
+This pump is an example of a positive displacement pump, as each inner cylinder encloses a fixed control volume of air and displaces that volume through the system.
 
-Pipe length -104 cm 
+<img src="{{ '/assets/images/Dissection.png' | relative_url }}" width="600" alt="Dissection image">
 
-Pipe/Hose diameter- 2 cm
+To start our analysis, we removed the base plate cover by hand and then used a screwdriver to take out the seal, which exposed the pump’s inlet and outlet check valves. After that, we unscrewed the pump body and carefully documented each internal component. This allowed us to identify the flow path and determine how the air moved through the system.
 
-Outlet valve diameter- 2.2 cm 
+When the handle moves, it drives the piston up and down, creating low and high pressure inside the cylinder. This pressure change draws air in during the suction stroke and pushes it out during the discharge stroke.
 
-Cylinder height - 37 cm 
+These are the measurements taken during the dissection:
 
-Cylinder Diameter- 10 cm
-
-Small inner cylinder diameters - 1.7 cm 
-
-Displacement of the pump handle at max extension - 33 cm 
-
-Anemometer calculations - 3.6 m/s
-
+- Pipe length: 104 cm
+- Pipe/Hose diameter: 2 cm
+- Outlet valve diameter: 2.2 cm
+- Cylinder height: 37 cm
+- Cylinder diameter: 10 cm
+- Small inner cylinder diameters: 1.7 cm
+- Displacement of the pump handle at max extension: 33 cm
+- Anemometer calculations: 3.6 m/s
 
 These measurements will help us perform more detailed calculations later about the pump’s efficiency, flow rate, and operating speed.
 
-The pump has connected tubes that function as short pipes with check valves. Flow through these passages is driven by pressure differences rather than by external freestream effects, and the air remains confined within solid walls throughout the process. As a result, the pump is fundamentally a container–pipe system governed by unsteady internal flow and the conservation of mass and momentum, rather than an airfoil-type flow device.
+The pump has connected tubes that function as short pipes with check valves. Flow through these passages is driven by pressure differences rather than by external freestream effects, and the air reacts according to the governing equations of fluid mechanics.
 
-The equation used is Bernoulli's equations which is <img src=/assets/images/Bernoulli_eq.png width="400" alt="Alt Text">
+The equation used is Bernoulli’s equation:
 
---> p/rho describes the pressure energy per unit mass created by the piston motion
+<img src="{{ '/assets/images/Bernoulli_eq.png' | relative_url }}" width="400" alt="Bernoulli equation">
 
---> v^2/2 describes the kinetic energy per unit mass of air as it accelerates through the narrow tubes
+This equation describes how pressure energy, kinetic energy, and gravitational potential energy are related in a flowing fluid. It also includes head loss due to frictional effects.
 
---> g*z describes the gravitational potential energy per unit mass for the high difference along the tubes
+This equation helps us understand how the pressure energy generated by the piston is redistributed into flow kinetic energy and dissipated through losses in the tubes and valves before the air reaches the tire.
 
---> hL describes the Head loss due to the friction in the tube
+The pump’s behavior is governed mainly by the Reynolds number, which tells us how turbulent the airflow inside the hose is, and by the pressure-volume work equation, which tells us how much force is needed to compress the air.
 
-This equation helps us understand how the pressure energy generated by the piston is redistributed into flow kinetic energy and dissipated through losses in the tubes and valves before the air reaches the tire, explaining both the required pumping force and the pump's efficiency.
+Using these parameters, we can explain why the pump is designed the way it is. If the piston diameter were doubled, the stroke volume would increase fourfold, but the user would also need four times the force to move it. Similarly, if the tube were too narrow, pressure losses would rise dramatically and the pump would become inefficient.
 
-The pump’s behavior is governed mainly by the Reynolds number, which tells us how turbulent the airflow inside the hose is, and by the pressure–volume work equation, which tells us how much force the user must apply. In a bike pump, we calculated it to be around 25hundred, meaning the flow is probably intermittent (which is true), and friction losses matter. We can still use the Darcy–Weisbach equation for intermittent flow by applying it to the instantaneous flow velocities during each stroke, treating the flow as quasi-steady.
+Finally, if the working fluid had much higher viscosity, the Reynolds number would collapse to nearly zero and the pump simply wouldn’t work. So all in all, every part of the pump is sized so the pressure is high enough for the tire, but still low enough for a human to push.
 
-Using these parameters, we can explain why the pump is designed the way it is. If the piston diameter were doubled, the stroke volume would increase fourfold, but the user would also need four times the force, making the pump unusable. If the hose diameter were doubled, friction losses would drop to about 1/30th! But the hose wouldn’t seal on the valve. If the hose were sharply curved, bend losses would spike, and pumping would feel harder. And if the internal surfaces were rough, friction would increase, and efficiency would drop.
-Finally, if the working fluid had much higher viscosity honey the Reynolds number would collapse to nearly zero and the pump simply wouldn’t work.
-So all in all, every part of the pump is sized so the pressure is high enough for the tire, but still low enough for a human to push
+For this specific pump, we can use Bernoulli’s equation:
 
-For this specific pump, we can use Bernoulli's equation <img src=/assets/images/Bernoulli_eq.png width="400" alt="Alt Text">
+<img src="{{ '/assets/images/Bernoulli_eq.png' | relative_url }}" width="400" alt="Bernoulli equation">
 
-This formula can be simplified in this scenario quite a bit, as many terms cancel to 0. To begin with, our z2 is going to be a set value, determined by where we put the end of the hose. Our starting velocity is 0, as the pump sits at rest with no forces or flowing air in it before we begin pumping.
-<img src=/assets/images/Initial_Bernoulli_eq.png width="300" alt="Alt Text">
+This formula can be simplified in this scenario quite a bit, as many terms cancel to zero. To begin with, our z2 is going to be a set value determined by where we put the end of the hose. Our starting conditions are defined by the inlet pressure and velocity, and we evaluate the pressure difference needed to move air into the tire.
 
-We will look at the situation in which the tire is unfilled, and thus p2 is equal to 0.
-p1=F/A, rho=1.225, z2 = 0 to 104 cm, z1 is dependent on when in the pull cycle we are at, A = 0.05^2*pi=0.00785398163397, hL=1.04, D=0.02, and theoretically F depends on the tire pressure, since people apply very differing forces depending on the pressure opposing. 
+<img src="{{ '/assets/images/Initial_Bernoulli_eq.png' | relative_url }}" width="300" alt="Initial Bernoulli equation">
 
-For our example we will use z2 = 50 cm, and we will evaluate at z1 = 0, thus <img src=/assets/images/Speed.png width="175" alt="Alt Text">
+We will look at the situation in which the tire is unfilled, and thus p2 is equal to 0. We then solve for the required airflow velocity and pressure distribution. Using the parameters of the system, we can estimate the pump output capabilities and determine whether the structure is reasonable for practical use.
 
-<img src=/assets/images/Speed2.png width="150" alt="Alt Text"> which is transcendental, so we iterate by trying different U’s to find the correct value. 
-<img src=/assets/images/Speed3.png width="250" alt="Alt Text">
+For our example we will use z2 = 50 cm, and we will evaluate at z1 = 0. This gives us a simplified relationship that we can solve iteratively:
 
-We assumed U=5, which gave us a a Reynold number of Re=3.5e5 with Re=(rho*U*L)/mu
-f=0.01485895860068907,5 which gives us back U=101.920885553. Then we go back to the Reynolds number, which gives us a new number. At the end of repeating this process, we finally get U=99.8035224963
+<img src="{{ '/assets/images/Speed.png' | relative_url }}" width="175" alt="Speed equation">
 
-Now we calculate for efficiency <img src=/assets/images/Efficiency.png width="200" alt="Alt Text">. We can see the efficiency of the pump is heavily reliant on its diameter of it. The bigger the diameter, the more efficient it becomes. This means that the pump does more work when its diameter is large, which makes sense since it can move more air into the tire. On the other hand, we see that the bigger the diameter, the lower the max pressure it can put in a tire, as stated in the equation for pressure P=F/A. 
+<img src="{{ '/assets/images/Speed2.png' | relative_url }}" width="150" alt="Speed equation 2">
 
-So this means that if you want to fill a tire with a high pressire threshold than it will take you longer as the pump needs to be small in diameter, causing you to have to make more strokes.
+This equation is transcendental, so we iterate by trying different values of velocity to find the correct result.
 
+<img src="{{ '/assets/images/Speed3.png' | relative_url }}" width="250" alt="Speed equation 3">
 
-In my group, I contributed in defining the governing parameters, the assumptions made for this analysis, and helped identifying the different components of the bike pump.
+We assumed U = 5, which gave us a Reynolds number of Re ≈ 3.5e5. This allowed us to estimate friction and then adjust our solution until the values converged.
+
+Now we calculate efficiency:
+
+<img src="{{ '/assets/images/Efficiency.png' | relative_url }}" width="200" alt="Efficiency equation">
+
+We can see the efficiency of the pump is heavily reliant on its diameter. The bigger the diameter, the more air the pump can move at a given pressure, but with increased force requirements and less convenient operation. This tradeoff is central to the design of many fluid systems.
+
+So this means that if you want to fill a tire with a high-pressure threshold, it will take you longer as the pump needs to be small in diameter, causing you to have to make more strokes.
+
+In my group, I contributed in defining the governing parameters, the assumptions made for this analysis, and helped identify the different components of the bike pump.
