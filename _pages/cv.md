@@ -13,14 +13,14 @@ permalink: /cv/
 ---
 
 #### Objective
-Aspiring engineering student with a strong foundation in.... Passionate about ... and eager to apply my knowledge in real-world applications.
+Aspiring engineering student with a strong foundation in mechanical engineering. Passionate about about how cars, rockets, and how semi-conducters work and eager to apply my knowledge in real-world applications.
 
 ---
 
 #### Education
 - **Cornell University**  
   *Bachelor's in Mechanical Engineering*  
-  GPA: 2.9/4.0 | Graduation: May/2027
+  GPA: 2.82/4.0 | Graduation: May/2027
 
 ---
 
@@ -30,6 +30,14 @@ Aspiring engineering student with a strong foundation in.... Passionate about ..
 - **Mechanical Skills:** Thermodynamics & energy systems, structural analysis, rapid prototyping
 ---
 
+### Languages
+
+French - native language
+English - fluent
+Spanish - intermediate
+Dutch - intermediate
+
+---
 #### Projects
 - **[Fluids project]**:  
   *[In this project I am to study how a bike pump works under the perspective of fluid mechanics]*  
@@ -46,29 +54,32 @@ Aspiring engineering student with a strong foundation in.... Passionate about ..
 
 #### Work Experience
 - **[Binnies Hong Kong] - Mechanical Engineering Intern**  
-  [May, 2025] - [july, 2025]  
+  [May, 2025] - [July, 2025]  
   - Designing pump system control diagrams  
   - Cost estimating for major WSD projects
  
 - **[PCI Pharma] - Mechanical Engineering Intern**
-  [May, 2025] - [july, 2025]
+  [May, 2025] - [July, 2025]
   - Developed and revised SOPs and preventive maintenance procedures
   - Created preventive maintenance plans (completion of forms, training materials, and spare-part documentation)
  
-- **[PCI Pharma] - Mechanical Engineering Intern**
+- **[Cornell research]**
+  [March 2026] - [Present]
+  - Cornell Space Structures, where we creat novel structures in space to dramatically increase the capabilities of satellites and infrastructures in orbit.
 
----
-
-#### Achievements & Certifications
-- [Certification Name], [Issuing Organization], [Year]  
-- [Achievement Name], [Competition/Event], [Year]  
+- **[Supervisor Sales and Tech Support, Cornell Store]**
+  [Jan 2024] - [Present]
+  - Supervise sales team
+  - Advise clients on IT hardware, software, and engineering tools.
+  - Provided hands-on troubleshooting
+  - Improve customer experience through technical guidance
 
 ---
 
 #### Extracurricular Activities
-- Member of [Club/Organization Name]  
-- Volunteer for [Event/Organization Name]  
-
+- Member of [Cornell ChemE Car Project Team] - [Mechanical Sub-team Lead]  
+- Memeber of [Cru Cornell, Community Group] - [Bible study leader]  
+- Member of [Cornell Shakespeare, Actor]
 ---
 
 #### References
