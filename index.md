@@ -17,6 +17,6 @@ I also serve as a Community Group Leader with CRU at Cornell, where I develop le
 
 Outside of engineering, I enjoy snowboarding, gaming, acting, and science fiction.
 
-[Resume]({{ '/assets/MATHIS_VIGNEAU.pdf' | relative_url }})
+[CV]({{ '/assets/MATHIS_VIGNEAU.pdf' | relative_url }})
 
 [Projects]({{ '/projects/' | relative_url }})
