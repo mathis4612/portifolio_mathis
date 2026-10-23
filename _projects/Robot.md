@@ -6,7 +6,6 @@ permalink: /projects/robot/
 ---
 
 # Robot Project
-
 This project focused on designing and testing an autonomous robot system for a specific engineering task. The goal was to combine mechanical design, control logic, and system analysis into a working prototype.
 
 <div style="margin: 1.5rem 0;">
