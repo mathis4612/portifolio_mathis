@@ -7,7 +7,7 @@ permalink: /projects/robot/
 
 # Robot Project
 
-<img src="{{ '/assets/images/robot_project.png' | relative_url }}" alt="Robot project preview" width="200" style="display:block; margin: 0 auto;">
+<img src="{{ '/assets/images/robot_project.png' | relative_url }}" alt="Robot project preview" width="350" style="display:block; margin: 0 auto;">
 
 This project focused on designing and testing an autonomous robot system for a specific engineering task.
 
