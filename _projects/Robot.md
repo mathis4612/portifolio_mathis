@@ -6,12 +6,18 @@ permalink: /projects/robot/
 ---
 
 # Robot Project
-This project focused on designing and testing an autonomous robot system for a specific engineering task. The goal was to combine mechanical design, control logic, and system analysis into a working prototype.
 
-<div style="margin: 1.5rem 0;">
-  <embed src="{{ '/assets/Robot_Project_Report.pdf' | relative_url }}" type="application/pdf" width="100%" height="900px">
+<img src="{{ '/assets/images/robot_project.png' | relative_url }}" alt="Robot project preview" width="600" style="display:block; margin: 0 auto;">
+
+This project focused on designing and testing an autonomous robot system for a specific engineering task.
+
+<div style="width: min(100%, 1100px); margin: 0 auto;">
+  <iframe
+    src="{{ '/assets/Robot_Project_Report.pdf' | relative_url }}"
+    style="display:block; width:100%; height:900px; border:none; margin:0 auto;"
+  ></iframe>
 </div>
 
-<p>
+<p style="text-align:center;">
   <a href="{{ '/assets/Robot_Project_Report.pdf' | relative_url }}" target="_blank">Open PDF in a new tab</a>
 </p>
